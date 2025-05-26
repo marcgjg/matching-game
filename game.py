@@ -201,9 +201,9 @@ with st.expander("ℹ️ About this game", expanded=False):
     st.markdown("""
     This game consists of matching industries with their correct beta, leverage (D/(D+E)) and WACC. 
     
-    There are different ways of playing this game. The easiest way is to focus on one metric (e.g., the beta) and then rank the 
-    industries from the lowest to highest beta. If two industries have very similar betas, consider their other metrics (e.g., leverage). For example, industries that sell basic services and goods are likely to have very low
-    betas. However, such industries may still differ in terms of their leverage.
+    There are different ways of playing this game. The easiest way is to focus on one metric -- e.g., the beta -- and then rank the industries 
+    from the lowest to highest beta. If two industries have very similar betas, consider their other metrics (e.g., leverage). For example, 
+    industries that sell basic services and goods are likely to have very low betas. However, such industries may still differ in terms of their leverage.
 
     The data used in this application are taken from Professor Damodaran's website.
     """)
