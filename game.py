@@ -204,6 +204,8 @@ with st.expander("ℹ️ About this game", expanded=False):
     There are different ways of playing this game. The easiest way is to focus on one metric -- e.g., the beta -- and then rank the industries 
     from the lowest to highest beta. If two industries have very similar betas, consider their other metrics (e.g., leverage). For example, 
     industries that sell basic services and goods are likely to have very low betas. However, such industries may still differ in terms of their leverage.
+    For example, more mature industries and those with more tangible assets tend to have greater leverage than younger industries and those with more
+    intangibles.
 
     The data used in this application are taken from Professor Damodaran's website.
     """)
