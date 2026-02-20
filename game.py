@@ -7,7 +7,7 @@ from io import StringIO
 st.set_page_config(page_title="Industry Matching Game", layout="wide")
 
 # ---------- data load ----------
-CSV = "https://www.stern.nyu.edu/~adamodar/pc/datasets/wacc.csv"
+CSV = "https://www.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls"
 FALLBACK = """Industry Name,Beta,Cost of Capital,D/(D+E)
 Advertising,1.34,9.22,20.76
 Aerospace/Defense,0.90,7.68,18.56
