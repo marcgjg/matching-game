@@ -9,100 +9,100 @@ st.set_page_config(page_title="Industry Matching Game", layout="wide")
 # ---------- data load ----------
 CSV = "https://www.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls"
 FALLBACK = """Industry Name,Beta,Cost of Capital,D/(D+E)
-Advertising,1.34,9.22,20.76
-Aerospace/Defense,0.90,7.68,18.56
-Air Transport,1.24,7.29,51.65
-Apparel,0.99,7.44,31.45
-Auto & Truck,1.62,10.34,18.3
-Auto Parts,1.23,8.09,32.36
-Bank (Money Center),0.88,5.64,64.69
-Banks (Regional),0.52,5.69,37.62
-Beverage (Alcoholic),0.61,6.55,23.35
-Beverage (Soft),0.57,6.59,16.48
-Broadcasting,0.92,6.03,59.93
-Brokerage & Investment Banking,0.95,5.74,65.11
-Building Materials,1.36,9.46,15.95
-Business & Consumer Services,1.00,8.27,14.37
-Cable TV,0.96,6.28,55.82
-Chemical (Basic),1.15,7.63,36.81
-Chemical (Diversified),0.99,6.47,53.08
-Chemical (Specialty),0.92,7.67,21.34
-Coal & Related Energy,1.18,9.23,8.65
-Computer Services,1.23,8.72,20.84
-Computers/Peripherals,1.14,9.29,4.6
-Construction Supplies,1.29,9.14,17.74
-Diversified,1.09,8.61,13.86
-Drugs (Biotechnology),1.25,9.37,14.6
-Drugs (Pharmaceutical),1.07,8.72,14.45
-Education,0.98,8.1,16.28
-Electrical Equipment,1.27,9.4,12.93
-Electronics (Consumer & Office),0.92,8.12,11.75
-Electronics (General),1.06,8.55,12.6
-Engineering/Construction,0.99,8.17,15.2
-Entertainment,1.04,8.28,16.9
-Environmental & Waste Services,0.92,7.88,16.19
-Farming/Agriculture,0.98,7.43,34.78
-Financial Svcs. (Non-bank & Insurance),1.07,5.46,74.14
-Food Processing,0.47,6.02,26.75
-Food Wholesalers,0.72,6.64,30.21
-Furn/Home Furnishings,0.87,7.15,29.54
-Green & Renewable Energy,1.13,6.5,63.79
-Healthcare Products,1.01,8.5,11.34
-Healthcare Support Services,0.94,7.6,24.36
-Heathcare Information and Technology,1.22,9.1,13.94
-Homebuilding,1.43,9.78,14.89
-Hospitals/Healthcare Facilities,0.86,6.57,43.55
-Hotel/Gaming,1.19,8.12,30.17
-Household Products,0.90,7.91,13.21
-Information Services,0.98,7.62,26.13
-Insurance (General),0.76,7.35,14.79
-Insurance (Life),0.73,6.36,38.55
-Insurance (Prop/Cas.),0.61,6.79,13.39
-Investments & Asset Management,0.57,6.2,25.95
-Machinery,1.07,8.54,13.57
-Metals & Mining,1.02,8.4,14.35
-Office Equipment & Services,1.20,8.05,31.74
-Oil/Gas (Integrated),0.48,6.33,12.06
-Oil/Gas (Production and Exploration),0.88,7.52,21.04
-Oil/Gas Distribution,0.75,6.59,34.01
-Oilfield Svcs/Equip.,0.94,7.44,27.81
-Packaging & Container,0.98,7.2,34.6
-Paper/Forest Products,1.07,8.32,18.41
-Power,0.54,5.54,44.55
-Precious Metals,1.23,9.09,15.89
-Publishing & Newspapers,0.64,6.63,22.3
-R.E.I.T.,0.95,6.62,45.5
-Real Estate (Development),1.03,6.58,52.09
-Real Estate (General/Diversified),0.86,6.99,29.55
-Real Estate (Operations & Services),1.08,8.14,22.35
-Recreation,1.33,7.97,39.43
-Reinsurance,0.54,6.08,26.78
-Restaurant/Dining,1.01,8.05,18.79
-Retail (Automotive),1.35,8.39,33.51
-Retail (Building Supply),1.79,11,16.8
-Retail (Distributors),1.12,8.16,23.82
-Retail (General),1.06,8.79,8.03
-Retail (Grocery and Food),0.58,5.96,34.32
-Retail (REITs),0.95,6.96,35.39
-Retail (Special Lines),1.22,8.64,22.44
-Rubber& Tires,0.65,5.33,79.47
-Semiconductor,1.49,10.76,3.75
-Semiconductor Equip,1.48,10.51,7.56
-Shipbuilding & Marine,0.58,6.64,16.05
-Shoe,1.42,10.15,9.29
-Software (Entertainment),1.18,9.58,2.43
-Software (Internet),1.69,11.1,10.35
-Software (System & Application),1.24,9.69,4.67
-Steel,1.06,8.17,20.57
-Telecom (Wireless),0.77,6.92,32.25
-Telecom. Equipment,1.00,8.39,11.35
-Telecom. Services,0.89,6.37,50.04
-Tobacco,0.98,7.95,21.85
-Transportation,1.03,7.72,27.91
-Transportation (Railroads),0.99,7.75,22.11
-Trucking,1.10,8.39,18.64
-Utility (General),0.39,5.2,43.84
-Utility (Water),0.68,6.15,36.96%"""
+Advertising,1.21,7.81,28.67
+Aerospace/Defense,0.95,7.6,13.47
+Air Transport,1.19,6.72,47.69
+Apparel,0.94,7.13,23.83
+Auto & Truck,1.46,9.38,16.45
+Auto Parts,1.34,8.18,29.31
+Bank (Money Center),0.76,4.98,62.15
+Banks (Regional),0.4,4.98,34.25
+Beverage (Alcoholic),0.81,6.48,30.24
+Beverage (Soft),0.64,6.33,17.07
+Broadcasting,0.47,5.09,46.19
+Brokerage & Investment Banking,1.17,6.08,57.55
+Building Materials,1.11,7.85,20.63
+Business & Consumer Services,0.89,7.23,16.47
+Cable TV,0.74,5.2,59.5
+Chemical (Basic),1.01,6.22,49.84
+Chemical (Diversified),0.85,5.23,63.78
+Chemical (Specialty),0.97,7.25,23.01
+Coal & Related Energy,1.07,8.41,6.67
+Computer Services,1.09,7.83,20.06
+Computers/Peripherals,1.35,9.71,4.42
+Construction Supplies,1.15,8.29,14.98
+Diversified,0.88,7.3,13.46
+Drugs (Biotechnology),1.14,8.49,11.54
+Drugs (Pharmaceutical),0.98,7.85,12.69
+Education,0.78,6.75,19.6
+Electrical Equipment,1.25,8.99,10.72
+Electronics (Consumer & Office),0.87,7.63,5.49
+Electronics (General),0.97,7.85,9.92
+Engineering/Construction,1.21,8.69,12.29
+Entertainment,0.83,7.13,13.73
+Environmental & Waste Services,0.95,7.43,17.66
+Farming/Agriculture,1.13,7.27,34.14
+Financial Svcs. (Non-bank & Insurance),0.97,5,73.13
+Food Processing,0.61,5.79,30.43
+Food Wholesalers,0.87,6.53,31.96
+Furn/Home Furnishings,0.82,6.53,29.74
+Green & Renewable Energy,0.86,6.04,53.08
+Healthcare Products,0.91,7.54,11.34
+Healthcare Support Services,0.87,6.83,26.16
+Heathcare Information and Technology,1.11,8.22,13.6
+Homebuilding,0.91,7.27,17.59
+Hospitals/Healthcare Facilities,0.8,6.19,37.47
+Hotel/Gaming,1.08,7.36,28.44
+Household Products,0.82,7.03,15.36
+Information Services,0.92,7,24.91
+Insurance (General),0.67,6.34,20.4
+Insurance (Life),0.64,5.6,40.42
+Insurance (Prop/Cas.),0.48,5.78,12.91
+Investments & Asset Management,0.66,6.13,24.64
+Machinery,0.96,7.7,12.81
+Metals & Mining,1.04,8.2,9.9
+Office Equipment & Services,1.33,7.92,32.48
+Oil/Gas (Integrated),0.3,5.07,12.16
+Oil/Gas (Production and Exploration),0.72,6.25,27.32
+Oil/Gas Distribution,0.67,5.78,36.92
+Oilfield Svcs/Equip.,0.95,7.04,27.2
+Packaging & Container,1.02,6.75,35.53
+Paper/Forest Products,0.96,6.93,30.4
+Power,0.48,5.01,42.58
+Precious Metals,0.84,7.47,6.79
+Publishing & Newspapers,0.56,5.95,19.32
+R.E.I.T.,0.64,5.32,45.79
+Real Estate (Development),0.84,5.82,50.45
+Real Estate (General/Diversified),0.81,6.25,34.88
+Real Estate (Operations & Services),0.97,7.41,19.77
+Recreation,1.02,6.76,38.65
+Reinsurance,0.58,5.64,30.3
+Restaurant/Dining,0.92,7.16,21.4
+Retail (Automotive),0.94,6.78,31.2
+Retail (Building Supply),1.54,9.51,18.89
+Retail (Distributors),0.95,7.22,22.02
+Retail (General),0.81,7.27,7.36
+Retail (Grocery and Food),1.12,7.24,34.19
+Retail (REITs),0.62,5.57,36.07
+Retail (Special Lines),1.09,8.01,16.5
+Rubber& Tires,0.53,4.48,78.19
+Semiconductor,1.52,10.55,2.53
+Semiconductor Equip,1.4,9.89,4.64
+Shipbuilding & Marine,0.75,6.69,18.4
+Shoe,1.02,8.01,10.67
+Software (Entertainment),1.03,8.44,2
+Software (Internet),1.69,10.66,10.95
+Software (System & Application),1.28,9.34,5.28
+Steel,1.06,7.76,19.04
+Telecom (Wireless),0.54,5.48,34.19
+Telecom. Equipment,0.92,7.72,8.44
+Telecom. Services,0.63,5.39,49
+Tobacco,0.79,6.94,18.68
+Transportation,0.86,6.72,26.71
+Transportation (Railroads),0.98,7.27,21.75
+Trucking,1.01,7.52,20.15
+Utility (General),0.24,4.36,44.9
+Utility (Water),0.41,4.93,38.41%"""
 
 @st.cache_data
 def load_data():
