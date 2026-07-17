@@ -144,7 +144,7 @@ with st.sidebar:
         n = st.slider("Number of industries", 2, 10, 5)
         st.markdown(f"*Selected: {n} industries*")
         
-        if st.button("🚀 Start Game", type="primary", use_container_width=True):
+        if st.button("🚀 Start Game", type="primary", width='stretch'):
             sample   = df_all.sample(n).reset_index(drop=True)
             letters  = list(string.ascii_uppercase[:n])
 
@@ -277,7 +277,7 @@ if ss.game_active:
             height=600, 
             margin=dict(l=0, r=0, t=20, b=0)
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
 
     # dropdowns (right)
     with col_right:
@@ -314,7 +314,7 @@ if ss.game_active:
             st.markdown("---")
             col1, col2, col3 = st.columns([1,2,1])
             with col2:
-                if st.button("🚀 Submit Answers", type="primary", use_container_width=True):
+                if st.button("🚀 Submit Answers", type="primary", width='stretch'):
                     if "Select..." in ss.answers.values():
                         st.error("⚠️ Complete all selections first.")
                     elif len(set(ss.answers.values())) < len(letters):
@@ -379,3 +379,5 @@ st.markdown(
     "</div>", 
     unsafe_allow_html=True
 )
+
+# end of file
